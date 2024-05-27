@@ -86,7 +86,7 @@ if prompt := st.chat_input("Any projects on Federated Learning?"):
                 ]+[{"role": "user", "content": "Most related projects:\n"+"\n".join([str(i+1)+". "+j for i,j in enumerate(st.session_state.context_tldrs[:3])])}],
                 stream=True,
                 temperature=0,
-
+                max_tokens=512,
             )
             response = st.write_stream(stream)
             st.session_state.messages.append({"role": "assistant", "content": response})
