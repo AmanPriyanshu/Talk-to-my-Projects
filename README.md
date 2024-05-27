@@ -13,7 +13,15 @@ Interact with my projects to quickly assess their value and relevance to your ac
 - Quick assessment of project relevance and value to user needs
 - Suitable for both academic and business use cases
 
-## Technical Optimizations
+### Demo Images
+![base](/images/base.png)
+![base](/images/federated-learning.png)
+![base](/images/keywords.png)
+![base](/images/differential-privacy.png)
+
+## Method/Implementation:
+
+![flow-chart](/images/flow_chart.png)
 
 ### Efficient Keyword Extraction
 - The `extract_keywords_custom` function utilizes Aman's library [AdaptKeyBERT](https://github.com/AmanPriyanshu/AdaptKeyBERT) model with the 'all-MiniLM-L6-v2' configuration for keyword extraction.
