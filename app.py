@@ -14,7 +14,7 @@ def extract_keywords_custom(text):
     res = [i[0] for i in res]
     return res
 
-@st.cache
+@st.cache_data
 def load_projects():
     with st.spinner(text="Warming up projects..."):
         df = pd.read_csv('projects.csv', delimiter="\t")
@@ -44,7 +44,7 @@ st.title("Talk to my Projects")
 
 st.sidebar.title("User Keywords and Project Ranking")
 
-st.info("To keep this service free, you have a limit of 10 messages.")
+st.info("To keep this service free, you have a limit of 10 messages. Try to use full-forms.\n* What projects has Aman done on Differential Privacy?\n* Any projects related to healthcare?\n* Who is Aman Priyanshu?\n\nConnect with Aman: amanpriyanshusms2001@gmail.com or visit his Website: https://amanpriyanshu.github.io/")
 
 client = OpenAI(api_key=st.secrets["TOGETHER_API_KEY"], base_url="https://api.together.xyz/v1",)
 
@@ -60,7 +60,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-if prompt := st.chat_input("What is up?"):
+if prompt := st.chat_input("Any projects on Federated Learning?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
