@@ -75,6 +75,7 @@ if prompt := st.chat_input("Any projects on Federated Learning?"):
         for i in range(len(sorted_names)):
             points += "* **"+sorted_names[i]+"** (_cosine:"+str(round(sorted_scores[i], 2))+"_)"+"\n   "+sorted_urls[i]+"\n"
         st.sidebar.markdown("## Top Projects:\n"+points)
+        st.sidebar.image("./images/qr_code.png")
 
     with st.chat_message("assistant"):
         if len(st.session_state.messages)<=10:
