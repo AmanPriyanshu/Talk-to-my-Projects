@@ -16,7 +16,7 @@ Interact with my projects to quickly assess their value and relevance to your ac
 ## Technical Optimizations
 
 ### Efficient Keyword Extraction
-- The `extract_keywords_custom` function utilizes the KeyBERT model with the 'all-MiniLM-L6-v2' configuration for keyword extraction.
+- The `extract_keywords_custom` function utilizes Aman's library [AdaptKeyBERT](https://github.com/AmanPriyanshu/AdaptKeyBERT) model with the 'all-MiniLM-L6-v2' configuration for keyword extraction.
 - It extracts keyphrases of 1-2 ngrams, excludes common stop words, and returns the top 10 most relevant keywords.
 - This optimization ensures focused and meaningful keyword extraction from project descriptions.
 
