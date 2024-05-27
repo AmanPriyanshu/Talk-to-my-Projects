@@ -1,23 +1,69 @@
 # Talk-to-my-Projects
+
 Interact with my projects to quickly assess their value and relevance to your academic or business needs.
 
 ## About
 
-Welcome to "Talk-to-my-Projects"! This repository is designed to help you explore and understand the potential applications of my research works and projects. By engaging in interactive conversations powered by a Streamlit app and LLaMA-3 language model, you can quickly determine if any of my projects align with your requirements.
+"Talk-to-my-Projects" is a repository that allows you to explore and understand the potential applications of my research works and projects through interactive conversations. The Streamlit app and LLaMA-3 language model enable users to determine if any of my projects align with their requirements efficiently.
 
 ## Key Features
 
 - Curated list of my research works and projects
 - Intuitive conversational interface powered by Streamlit and LLaMA-3-7B-Chat
-- Quick assessment of project relevance and value to your needs
+- Quick assessment of project relevance and value to user needs
 - Suitable for both academic and business use cases
+
+## Technical Optimizations
+
+### Efficient Keyword Extraction
+- The `extract_keywords_custom` function utilizes Aman's library [AdaptKeyBERT](https://github.com/AmanPriyanshu/AdaptKeyBERT) model with the 'all-MiniLM-L6-v2' configuration for keyword extraction.
+- It extracts keyphrases of 1-2 ngrams, excludes common stop words, and returns the top 10 most relevant keywords.
+- This optimization ensures focused and meaningful keyword extraction from project descriptions.
+
+### Caching and Performance Enhancement
+- The `load_projects` function is decorated with `@st.cache` to cache the loaded projects dataframe.
+- Caching avoids unnecessary reloading of the projects data on each app refresh, improving performance.
+- A spinner is displayed during the loading process to provide a smooth user experience.
+
+### Semantic Similarity Ranking
+- The `rank_projects` function employs the SentenceTransformer model to generate embeddings for user keywords and project keywords.
+- Cosine similarity is computed between the user and project embeddings to determine relevance scores.
+- Projects are then ranked based on their similarity scores, enabling users to quickly identify the most relevant projects.
+
+### Memory-Efficient Session State Management
+- Streamlit's session state is utilized to store and manage user messages, context TLDRs, and the selected OpenAI model.
+- By leveraging session state, the app maintains a consistent conversation flow without consuming excessive memory.
+- The app also imposes a limit of 10 messages per user to ensure fair usage and prevent resource exhaustion.
+
+### Contextual Project Information
+- The app intelligently incorporates the top 3 most relevant project TLDRs into the conversation context.
+- This allows the LLaMA-3 model to provide more targeted and informative responses based on the user's interests.
+- The context is dynamically updated based on the user's input, ensuring the conversation remains relevant and engaging.
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/AmanPriyanshu/Talk-to-my-Projects.git`
-2. Install the required dependencies: `pip install -r requirements.txt`
-3. Run the Streamlit app: `streamlit run app.py`
-4. Start exploring and interacting with my projects!
+1. Clone the repository:
+   ```
+   git clone https://github.com/AmanPriyanshu/Talk-to-my-Projects.git
+   ```
+
+2. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Set up the necessary API keys and secrets in the Streamlit secrets configuration.
+
+4. Run the Streamlit app:
+   ```
+   streamlit run app.py
+   ```
+
+5. Start exploring and interacting with my projects through the intuitive conversational interface.
+
+## Contributions and Feedback
+
+Contributions, suggestions, and feedback are welcome! If you have any ideas to enhance the app or encounter any issues, please feel free to open an issue or submit a pull request on the GitHub repository. Thank you for your interest in my research works and projects. I hope "Talk-to-my-Projects" proves to be a valuable resource in exploring the potential applications of my work to your academic or business needs.
 
 ## Other Usage Details
 
