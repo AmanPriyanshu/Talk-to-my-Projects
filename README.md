@@ -2,6 +2,8 @@
 
 Interact with my projects to quickly assess their value and relevance to your academic or business needs. Check it out here: [talk-to-aman-projects.streamlit.app](https://talk-to-aman-projects.streamlit.app/)
 
+![demo](/images/demo.gif)
+
 ## About
 
 "Talk-to-my-Projects" is a repository that allows you to explore and understand the potential applications of my research works and projects through interactive conversations. The Streamlit app and LLaMA-3 language model enable users to determine if any of my projects align with their requirements efficiently.
