@@ -71,6 +71,10 @@ Interact with my projects to quickly assess their value and relevance to your ac
 
 5. Start exploring and interacting with my projects through the intuitive conversational interface.
 
+## Sharing with Others
+
+![qr](/images/qr_code.png)   
+
 ## Contributions and Feedback
 
 Contributions, suggestions, and feedback are welcome! If you have any ideas to enhance the app or encounter any issues, please feel free to open an issue or submit a pull request on the GitHub repository. Thank you for your interest in my research works and projects. I hope "Talk-to-my-Projects" proves to be a valuable resource in exploring the potential applications of my work to your academic or business needs.
