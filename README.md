@@ -23,11 +23,11 @@ Welcome to "Talk-to-my-Projects"! This repository is designed to help you explor
 
 ### Attribution
 
-If you use or share this work, please provide attribution with the following information:
+* If you use or share this work, please provide attribution with the following information:
 
 _"Talk to my Projects" by Aman Priyanshu, licensed under CC BY-NC 4.0. Available at: https://github.com/AmanPriyanshu/Talk-to-my-Projects_
 
-When sharing adaptations of this work, please include a statement indicating that changes were made, such as:
+* When sharing adaptations of this work, please include a statement indicating that changes were made, such as:
 
 _This work is adapted from "Talk to my Projects" by Aman Priyanshu, licensed under CC BY-NC 4.0. Original work available at: https://github.com/AmanPriyanshu/Talk-to-my-Projects_
 
